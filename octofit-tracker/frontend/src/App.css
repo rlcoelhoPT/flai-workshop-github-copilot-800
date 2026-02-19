@@ -1,0 +1,228 @@
+/* ── OctoFit Tracker – Custom Theme ── */
+
+/* Root overrides */
+:root {
+  --octofit-primary:  #6c63ff;
+  --octofit-secondary:#f857a6;
+  --octofit-dark:     #1a1d23;
+  --octofit-accent:   #61dafb;
+  --octofit-light:    #f8f9fa;
+  --octofit-success:  #198754;
+  --octofit-bg-start: #0f2027;
+  --octofit-bg-mid:   #203a43;
+  --octofit-bg-end:   #2c5364;
+}
+
+/* ── App wrapper – full-page coloured background ── */
+.App {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #0f2027 0%, #203a43 45%, #2c5364 100%);
+  background-attachment: fixed;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e8eaf6;
+}
+
+/* ── Navbar ── */
+.octofit-navbar {
+  background: linear-gradient(90deg, #1a1d23 0%, #6c63ff 100%) !important;
+  box-shadow: 0 2px 12px rgba(108, 99, 255, 0.45);
+}
+
+.octofit-navbar .navbar-brand {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #fff !important;
+  letter-spacing: 0.5px;
+}
+
+.octofit-navbar .navbar-brand img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 8px;
+  object-fit: cover;
+}
+
+.octofit-navbar .nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.octofit-navbar .nav-link:hover,
+.octofit-navbar .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff !important;
+}
+
+/* ── Hero / Home ── */
+.octofit-hero {
+  background: linear-gradient(135deg, #6c63ff 0%, #f857a6 100%);
+  color: #fff;
+  padding: 5rem 2rem;
+  border-radius: 0 0 2rem 2rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 8px 32px rgba(108, 99, 255, 0.4);
+}
+
+.octofit-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.octofit-hero .lead {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* ── Feature Cards (Home) ── */
+.feature-card {
+  border: none;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(6px);
+  color: #e8eaf6;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(108, 99, 255, 0.35);
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.feature-card .card-body {
+  padding: 1.8rem;
+}
+
+.feature-card .feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.feature-card .card-title {
+  color: #fff;
+}
+
+.feature-card .card-text {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* ── Section Cards (Components) ── */
+.octofit-card {
+  border: none;
+  border-radius: 1rem;
+  background: #1e2130;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.octofit-card .card-header {
+  background: linear-gradient(90deg, #6c63ff 0%, #f857a6 100%);
+  color: #fff;
+  border-radius: 1rem 1rem 0 0 !important;
+  padding: 1rem 1.5rem;
+  border-bottom: none;
+}
+
+.octofit-card .card-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* ── Tables ── */
+.octofit-table {
+  margin-bottom: 0;
+  color: #e8eaf6;
+  background: #1e2130;
+  /* Override Bootstrap CSS vars for dark table */
+  --bs-table-color: #e8eaf6;
+  --bs-table-bg: #1e2130;
+  --bs-table-striped-color: #e8eaf6;
+  --bs-table-striped-bg: #252840;
+  --bs-table-hover-color: #fff;
+  --bs-table-hover-bg: rgba(108, 99, 255, 0.25);
+  --bs-table-border-color: rgba(255, 255, 255, 0.1);
+}
+
+.octofit-table thead th {
+  background: linear-gradient(90deg, #3a3580 0%, #8b1a6b 100%);
+  color: #fff;
+  font-weight: 600;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  white-space: nowrap;
+}
+
+.octofit-table tbody tr {
+  border-color: rgba(255, 255, 255, 0.08);
+  transition: background-color 0.15s;
+}
+
+.octofit-table tbody tr:hover {
+  background: rgba(108, 99, 255, 0.25) !important;
+  color: #fff !important;
+}
+
+.octofit-table td, .octofit-table th {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #e8eaf6;
+}
+
+/* ── Rank badges ── */
+.rank-badge-1 { background-color: #ffd700; color: #333; }
+.rank-badge-2 { background-color: #c0c0c0; color: #333; }
+.rank-badge-3 { background-color: #cd7f32; color: #fff; }
+
+/* ── Loading / Error ── */
+.octofit-loading,
+.octofit-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+  color: #e8eaf6;
+}
+
+/* ── Section heading on coloured bg ── */
+.container h2.section-title {
+  color: #fff;
+}
+
+/* ── Ensure readable text inside cards on dark bg ── */
+.octofit-card .card-body {
+  background: #1e2130;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.octofit-table .text-muted {
+  color: #a0aec0 !important;
+}
+
+.octofit-table .link-primary {
+  color: #93c5fd !important;
+  text-decoration: none;
+}
+
+.octofit-table .link-primary:hover {
+  color: #bfdbfe !important;
+  text-decoration: underline;
+}
+
+/* ── Footer ── */
+.octofit-footer {
+  background: linear-gradient(90deg, #1a1d23 0%, #6c63ff 100%);
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 0.85rem;
+  margin-top: 3rem;
+  box-shadow: 0 -2px 12px rgba(108, 99, 255, 0.3);
+}
+
