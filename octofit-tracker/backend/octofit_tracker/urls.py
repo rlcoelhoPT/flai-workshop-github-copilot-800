@@ -16,6 +16,7 @@ Including another URLconf
 import os
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic.base import RedirectView
 from rest_framework import routers
 from octofit_tracker import views
 from octofit_tracker.views import api_root
@@ -35,7 +36,7 @@ router.register(r'workouts', views.WorkoutViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', api_root, name='api-root'),
-    path('api/', api_root, name='api-root-prefix'),
+    path('', RedirectView.as_view(url='/api/', permanent=False)),
+    path('api/', api_root, name='api-root'),
     path('api/', include(router.urls)),
 ]
